@@ -18,7 +18,7 @@ public class GreetingController {
     public @ResponseBody
     Greeting greeting(
             @RequestParam(value="name", required=false, defaultValue="World") String name) {
-        System.out.println("==== in greeting ====");
+        System.out.println("==== in greeting2 ====");
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }

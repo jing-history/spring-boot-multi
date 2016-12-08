@@ -46,8 +46,9 @@ configure(subprojects){
      }*/
 
     dependencies {
-        testCompile "junit:junit:4.7"
+        testCompile "junit:junit:4.9"
         testCompile "org.mockito:mockito-all:1.8.5"
+        testCompile("org.springframework.boot:spring-boot-starter-test")
     }
 }
 
@@ -83,6 +84,8 @@ project('basis-spring-hello'){
     description = '参考 Sping 官方例子来了解和熟悉使用 Gradle 创建 Spring Boot 项目的过程'
     dependencies{
         compile("org.springframework.boot:spring-boot-starter-web")
+        compile("org.springframework.boot:spring-boot-starter-data-jpa")
         compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+        compile "mysql:mysql-connector-java:5.1.38"
     }
 }
