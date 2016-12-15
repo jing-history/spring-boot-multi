@@ -90,3 +90,13 @@ project('basis-spring-hello'){
         compile "mysql:mysql-connector-java:5.1.38"
     }
 }
+project('basis-demo'){
+    description = 'http://412887952-qq-com.iteye.com/blog/2294952 参考学习spring boot 使用'
+    dependencies{
+        compile("org.springframework.boot:spring-boot-starter-web")
+        compile("org.springframework.boot:spring-boot-starter-data-jpa")
+        compile("org.springframework:spring-context-support")
+        compile("net.sf.ehcache:ehcache")
+        compile "mysql:mysql-connector-java:5.1.38"
+    }
+}
