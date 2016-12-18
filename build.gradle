@@ -75,8 +75,11 @@ watch {
 }
 
 project('basis-spring-core'){
-    description = 'Spring boot 基础知识'
-    dependencies{}
+    description = 'Spring Boot分布式Session状态保存Redis【从零开始学Spring Boot】'
+    dependencies{
+        compile("org.springframework.boot:spring-boot-starter-redis")
+        compile("org.springframework.session:spring-session-data-redis")
+    }
 }
 project('basis-spring-hello'){
     apply plugin: 'jetty'
@@ -97,6 +100,19 @@ project('basis-demo'){
         compile("org.springframework.boot:spring-boot-starter-data-jpa")
         compile("org.springframework:spring-context-support")
         compile("net.sf.ehcache:ehcache")
+        compile "mysql:mysql-connector-java:5.1.38"
+    }
+}
+project('basis-spring-shiro'){
+    description = "spring boot shiro 使用"
+
+    dependencies{
+        compile("org.springframework.boot:spring-boot-starter-web")
+        compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+        compile("org.springframework.boot:spring-boot-starter-data-jpa")
+        compile("org.springframework:spring-context-support")   //包含支持UI模版（Velocity，FreeMarker，JasperReports） 邮件服务，脚本服务(JRuby)，缓存Cache（EHCache），任务计划Scheduling（uartz）。
+        compile "org.apache.shiro:shiro-spring:1.2.2"
+        compile "org.apache.shiro:shiro-ehcache:1.2.2"
         compile "mysql:mysql-connector-java:5.1.38"
     }
 }
