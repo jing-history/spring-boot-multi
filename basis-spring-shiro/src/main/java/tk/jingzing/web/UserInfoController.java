@@ -37,7 +37,6 @@ public class UserInfoController {
     @RequestMapping("/userDel")
     @RequiresPermissions("userInfo:del")//权限管理;
     public String userDel(){
-        System.out.println("aaaa==========>>>>");
         return "userInfoDel";
     }
 }
