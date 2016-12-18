@@ -8,6 +8,8 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.servlet.SimpleCookie;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import tk.jingzing.config.MyShiroRealm;
@@ -25,6 +27,8 @@ import java.util.Map;
  */
 @Configuration
 public class ShiroConfiguration {
+
+    private Logger logger =  LoggerFactory.getLogger(this.getClass());
 
     @Bean
     public MyShiroRealm myShiroRealm(){
@@ -121,7 +125,8 @@ public class ShiroConfiguration {
     }
 
     public EhCacheManager ehCacheManager(){
-        System.out.println("ShiroConfiguration.getEhCacheManager()");
+     //   System.out.println("ShiroConfiguration.getEhCacheManager()");
+        logger.info("ShiroConfiguration.getEhCacheManager()");
         EhCacheManager cacheManager = new EhCacheManager();
         cacheManager.setCacheManagerConfigFile("classpath:ehcache-shiro.xml");
         return  cacheManager;
@@ -133,7 +138,8 @@ public class ShiroConfiguration {
      */
     @Bean
     public SimpleCookie rememberMeCookie(){
-        System.out.println("ShiroConfiguration.rememberMeCookie()");
+     //   System.out.println("ShiroConfiguration.rememberMeCookie()");
+        logger.info("ShiroConfiguration.rememberMeCookie()");
         //这个参数是cookie的名称，对应前端的checkbox的name = rememberMe
         SimpleCookie simpleCookie = new SimpleCookie("rememberMe");
 
@@ -148,7 +154,8 @@ public class ShiroConfiguration {
      */
     @Bean
     public CookieRememberMeManager rememberMeManager(){
-        System.out.println("ShiroConfiguration.rememberMeManager()");
+     //   System.out.println("ShiroConfiguration.rememberMeManager()");
+        logger.info("ShiroConfiguration.rememberMeManager()");
         CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
         cookieRememberMeManager.setCookie(rememberMeCookie());
         return cookieRememberMeManager;
