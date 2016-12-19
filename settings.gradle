@@ -4,4 +4,5 @@ include "basis-spring-core"
 include "basis-spring-hello"
 include "basis-demo"
 include 'basis-spring-shiro'
+include 'spring-boot-mybatis'
 

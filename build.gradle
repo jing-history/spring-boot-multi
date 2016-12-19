@@ -118,3 +118,13 @@ project('basis-spring-shiro'){
         compile "mysql:mysql-connector-java:5.1.38"
     }
 }
+
+project('spring-boot-mybatis'){
+    description = "spring boot mybatis 的使用"
+    dependencies{
+        compile("org.springframework.boot:spring-boot-starter-web")
+        compile "org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1"
+        compile "mysql:mysql-connector-java:5.1.38"
+        compile "com.github.pagehelper:pagehelper:4.1.0"
+    }
+}
