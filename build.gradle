@@ -128,3 +128,18 @@ project('spring-boot-mybatis'){
         compile "com.github.pagehelper:pagehelper:4.1.0"
     }
 }
+
+project('basis-spring-aop'){
+    description = "spring boot AOP 的使用"
+    dependencies{
+        compile("org.springframework.boot:spring-boot-starter-web")
+        compile("org.springframework.boot:spring-boot-starter-aop")
+    }
+}
+
+project('basis-spring-restful'){
+    description = "spring boot restful 的使用"
+    dependencies{
+        compile("org.springframework.boot:spring-boot-starter-web")
+    }
+}
