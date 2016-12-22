@@ -7,4 +7,5 @@ include 'basis-spring-shiro'
 include 'spring-boot-mybatis'
 include 'basis-spring-aop'
 include 'basis-spring-restful'
+include 'basis-spring-log'
 

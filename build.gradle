@@ -143,3 +143,14 @@ project('basis-spring-restful'){
         compile("org.springframework.boot:spring-boot-starter-web")
     }
 }
+project('basis-spring-log'){
+    description = "spring boot log 的使用"
+    dependencies{
+        compile ('org.springframework.boot:spring-boot-starter-web'){
+          //  exclude module: 'org.springframework.boot:spring-boot-starter-logging'
+            exclude module: 'log4j-over-slf4j:org.slf4j'
+        }
+      //  compile("org.springframework.boot:spring-boot-starter-web")
+        compile ('org.springframework.boot:spring-boot-starter-log4j')
+    }
+}
