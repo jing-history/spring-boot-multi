@@ -146,6 +146,7 @@ project('basis-spring-restful'){
 project('basis-spring-log'){
     description = "spring boot log 的使用"
     dependencies{
+        compile ('org.springframework.boot:spring-boot-configuration-processor')
         compile ('org.springframework.boot:spring-boot-starter-web'){
           //  exclude module: 'org.springframework.boot:spring-boot-starter-logging'
             exclude module: 'log4j-over-slf4j:org.slf4j'
