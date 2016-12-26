@@ -2,12 +2,14 @@ package tk.jingzing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * http://www.tuicool.com/articles/6RzUZva
  * Created by wangyunjing on 2016/12/7.
  */
 @SpringBootApplication
+@EnableAsync
 public class Application {
 
 

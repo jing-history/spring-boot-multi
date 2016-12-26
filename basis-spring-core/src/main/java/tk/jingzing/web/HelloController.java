@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import tk.jingzing.core.Shanhy;
+import tk.jingzing.core.sync.Task;
 
 import javax.annotation.Resource;
 
@@ -26,5 +27,14 @@ public class HelloController {
         shanhyA.dispaly();
         shanhyB.dispaly();
         return"test";
+    }
+
+    @RequestMapping("/task")
+    public String task2() throws Exception{
+        Task task = new Task();
+        task.doTaskOne();
+        task.doTaskTwo();
+        task.doTaskThree();
+        return"task2";
     }
 }
