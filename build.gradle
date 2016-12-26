@@ -155,3 +155,10 @@ project('basis-spring-log'){
         compile ('org.springframework.boot:spring-boot-starter-log4j')
     }
 }
+project('basis-spring-validator'){
+    description = 'Spring Boot Validator校验'
+    dependencies{
+        compile("org.springframework.boot:spring-boot-starter-web")
+        compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    }
+}
