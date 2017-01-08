@@ -162,3 +162,15 @@ project('basis-spring-validator'){
         compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     }
 }
+project('book-springboot-action02'){
+    description = 'Spring Boot action 教程'
+    dependencies {
+        compile('org.springframework.boot:spring-boot-starter-data-jpa')
+        compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+        compile('org.springframework.boot:spring-boot-starter-web')
+        compile("org.springframework.boot:spring-boot-starter-security")
+        testCompile("org.springframework.security:spring-security-test")
+        testCompile("org.seleniumhq.selenium:selenium-java:2.45.0")
+        runtime('com.h2database:h2')
+    }
+}
